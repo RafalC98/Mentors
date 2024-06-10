@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header register-header">
+        <h1>
+            <a href="index.html">
+                <figure class="header__figure">
+                    <img src="img/bike-and-you.png" alt="Bike nad You" width="1002" height="1002">
+                    <figcaption class="offscreen">
+                        Mentors
+                    </figcaption>
+                </figure>
+            </a>
+        </h1>
+    </header>
+
+    <main>
+        <div class="full-screen-container">
+            <div class="register-container">
+                <div class="switch">
+                    <label>
+                        <input id="userType1" type="checkbox" name="checkbox" class="switch_inp" onchange="toggleForm()"
+                            checked>
+                        <span class="switch_span"></span>
+                    </label>
+                </div>
+                <div id="userForm">
+                    <form class="register-form" action="#" method="post">
+                        <div class="input-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="submit-button">Register</button>
+                        <a href="login.html" class="href-button">Log In</a>
+                    </form>
+                </div>
+
+                <div id="mentorForm" style="display:none;">
+                    <form class="register-form" action="#" method="post">
+                        <div class="input-group">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="industry">Industry:</label>
+                            <input type="text" id="industry" name="industry" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="specialization">Specialization:</label>
+                            <input type="text" id="specialization" name="specialization" required>
+                        </div>
+                        <button class="submit-button" type="submit">Register</button>
+                        <a href="login.html" class="href-button">Log In</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+
+
+            function toggleForm() {
+                var isUserChecked = document.getElementById("userType1").checked;
+
+                if (isUserChecked) {
+                    document.getElementById("userForm").style.display = "block";
+                    document.getElementById("mentorForm").style.display = "none";
+                } else {
+                    document.getElementById("userForm").style.display = "none";
+                    document.getElementById("mentorForm").style.display = "block";
+                }
+            }
+
+
+        </script>
+    </main>
+
+
+</body>
+
+</html>
